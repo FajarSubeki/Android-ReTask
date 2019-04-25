@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".AddTaskActivity">
+
+    <ScrollView
+        android:id="@+id/scrollAdd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etNamaTugas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Tugas"
+                    android:inputType="textMultiLine"
+                    app:met_floatingLabel="highlight"
+                    android:fontFamily="@font/open_sans_light"/>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etKetTugas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Keterangan Tugas"
+                    android:inputType="textMultiLine"
+                    app:met_floatingLabel="highlight"
+                    android:fontFamily="@font/open_sans_light"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*Opsional"
+                    android:layout_gravity="right"
+                    android:textSize="11sp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:id="@+id/tvTanggalBerangkat"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Pengumpulan Tugas"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:textColor="@android:color/black"
+                    />
+
+                <com.example.re_task.util.DatePicker
+                    android:id="@+id/dpTanggalSelesai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border"
+                    android:layout_weight="1"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Target Tugas Selesai"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:textColor="@android:color/black"
+                    />
+
+                <com.example.re_task.util.DatePicker
+                    android:id="@+id/dpTarget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border"
+                    android:layout_weight="1"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="*Opsional"
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="right"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="italic"/>
+
+                <Button
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/btnSimpanTugas"
+                    android:textColor="@android:color/white"
+                    android:text="Simpan Tugas"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:paddingBottom="20dp"
+                >
+
+                <ImageView
+                    android:layout_width="230dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/ic_undraw_taking_notes_tjaf"
+                    android:scaleType="fitCenter"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

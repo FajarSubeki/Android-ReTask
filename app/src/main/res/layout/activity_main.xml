@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hai, Fajar Subeki !"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="18dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelola tugasmu dengan teratur dan terencana"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/open_sans_light"
+                android:textSize="13dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@id/layout_top"
+        android:id="@+id/swipeHome"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_marginTop="13dp"
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorHint"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Silahkan Pilih Menu Dibawah"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorHint"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/quicksand_medium"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excepteur sint occaecat cupidatat no mollit anim est"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/quicksand_medium"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cardTugasBaru"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_margin="8dp"
+                            app:cardElevation="5dp"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="7dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/ic_list"
+                                    android:layout_gravity="center"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Tugas Baru"
+                                    android:textColor="@color/colorHint"
+                                    android:textSize="13dp"
+                                    app:fontFamily="@font/quicksand" />
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cardTugasLihat"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_margin="8dp"
+                            app:cardElevation="5dp"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_list_view" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Lihat Tugas"
+                                    android:textColor="@color/colorHint"
+                                    app:fontFamily="@font/quicksand"
+                                    android:textSize="13dp" />
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
